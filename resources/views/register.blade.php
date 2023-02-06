@@ -8,6 +8,9 @@
 </head>
 <body>
     <h1>Register</h1>
+    @if(session()->get('result') != null ) 
+        <p>{{  session()->get('result') }}</p>
+    @endif
     <form action="{{route('registered')}}" method="POST">
         @csrf
         @method('post')
